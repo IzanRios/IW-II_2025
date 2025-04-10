@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Contagem regressiva até 0</h2>
+    <input type="number" id="numero" placeholder="Digite um número">
+    <button onclick="contagemRegressiva()">Começar</button>
+    <pre id="saida"></pre>
+
+    <script>
+        function contagemRegressiva() {
+            let numero = parseInt(document.getElementById('numero').value);
+            let texto = "";
+            while (numero >= 0) {
+                texto += numero + "\n";
+                numero--;
+            }
+            document.getElementById('saida').innerText = texto;
+        }
+    </script>
+</body>
+</html>

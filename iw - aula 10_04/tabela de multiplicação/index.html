@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Tabuada de Multiplicação</h2>
+    <input type="number" id="numero" placeholder="Digite um número">
+    <button onclick="mostrarTabuada()">Mostrar Tabuada</button>
+    <pre id="tabuada"></pre>
+
+    <script>
+        function mostrarTabuada() {
+            let numero = parseInt(document.getElementById('numero').value);
+            let texto = "";
+            for (let i = 1; i <= 10; i++) {
+                texto += `${numero} x ${i} = ${numero * i}\n`;
+            }
+            document.getElementById('tabuada').innerText = texto;
+        }
+    </script>
+</body>
+</html>
