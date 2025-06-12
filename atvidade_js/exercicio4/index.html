@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="obrigatorio" placeholder="Obrigatório" onblur="verificarCampo()">
+
+<script>
+function verificarCampo() {
+  const campo = document.getElementById("obrigatorio");
+  if (campo.value.trim() === "") {
+    alert("Este campo é obrigatório!");
+  }
+}
+</script>
+
+</body>
+</html>

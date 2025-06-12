@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alternarTema()" id="temaBtn">🌙</button>
+
+<script>
+function alternarTema() {
+  document.body.classList.toggle("escuro");
+  const btn = document.getElementById("temaBtn");
+  btn.textContent = document.body.classList.contains("escuro") ? "🌞" : "🌙";
+}
+</script>
+
+<style>
+.escuro {
+  background-color: #222;
+  color: white;
+}
+</style>
+
+</body>
+</html>

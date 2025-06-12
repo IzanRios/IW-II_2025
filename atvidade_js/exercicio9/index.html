@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="upload" accept="image/*" onchange="mostrarImagem()">
+<br>
+<img id="preview" style="max-width: 200px; display: none;"/>
+
+<script>
+function mostrarImagem() {
+  const input = document.getElementById("upload");
+  const img = document.getElementById("preview");
+  const file = input.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = () => {
+      img.src = reader.result;
+      img.style.display = "block";
+    };
+    reader.readAsDataURL(file);
+  }
+}
+</script>
+
+</body>
+</html>

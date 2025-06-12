@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="validador" oninput="validarCampo()" placeholder="Digite algo...">
+
+<script>
+function validarCampo() {
+  const campo = document.getElementById("validador");
+  campo.style.border = campo.value.length < 5 ? "2px solid red" : "2px solid green";
+}
+</script>
+
+</body>
+</html>
